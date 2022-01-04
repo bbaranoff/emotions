@@ -7,7 +7,7 @@ face_cascade = cv2.CascadeClassifier()  #processing it for our project
 if not face_cascade.load(cv2.samples.findFile(face_cascade_name)):  #adding a fallback event
     print("Error loading xml file")
 
-video=cv2.VideoCapture(0)  #requisting the input from the webcam or camera
+video=cv2.VideoCapture(-1)  #requisting the input from the webcam or camera
 
 while video.idOpened():  #checking if are getting video feed and using it
     _,frame = video.read()
